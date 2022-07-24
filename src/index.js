@@ -11,7 +11,7 @@ import '../node_modules/modern-normalize/modern-normalize.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* goit-react-hw-05-movies */}
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/goit-react-hw-05-movies/">
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>

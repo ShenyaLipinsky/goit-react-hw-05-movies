@@ -4,11 +4,11 @@ import Layout from './Layout/Layout';
 import Cast from './Pages/FilmDetails/Cast';
 import FilmDetails from './Pages/FilmDetails/FilmDetails';
 import Reviews from './Pages/FilmDetails/Reviews';
-// import Home from './Pages/Home/Home';
+import Home from './Pages/Home/Home';
 // import Movies from './Pages/Movies/Movies';
 
 // const Layout = lazy(() => import('./Layout/Layout'));
-const Home = lazy(() => import('./Pages/Home/Home'));
+// const Home = lazy(() => import('./Pages/Home/Home'));
 const Movies = lazy(() => import('./Pages/Movies/Movies'));
 
 export const App = () => {

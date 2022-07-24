@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import propTypes from 'prop-types';
 
 export const SearchBox = ({ value, onSubmit }) => {
   const [queue, setQueue] = useState(value);
@@ -17,4 +18,8 @@ export const SearchBox = ({ value, onSubmit }) => {
       <button type="submit">Search</button>
     </form>
   );
+};
+SearchBox.propTypes = {
+  value: propTypes.string,
+  onSubmit: propTypes.func,
 };

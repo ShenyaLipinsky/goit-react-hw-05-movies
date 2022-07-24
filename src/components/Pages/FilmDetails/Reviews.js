@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 import { fetchReviews } from '../../services/API-MovieDB';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -41,5 +43,15 @@ const Reviews = () => {
       )}
     </Box>
   );
+};
+Reviews.propTypes = {
+  id: propTypes.string,
+  reviewsDetails: propTypes.arrayOf(
+    propTypes.shape({
+      author: propTypes.string,
+      content: propTypes.string,
+      id: propTypes.string,
+    })
+  ),
 };
 export default Reviews;

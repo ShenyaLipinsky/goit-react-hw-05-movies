@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 import { fetchMovieById } from '../../services/API-MovieDB';
 import { useState, useEffect, Suspense } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
@@ -91,6 +93,10 @@ const FilmDetails = () => {
       </Suspense>
     </>
   );
+};
+FilmDetails.propTypes = {
+  id: propTypes.number,
+  filmDetails: propTypes.array,
 };
 
 export default FilmDetails;

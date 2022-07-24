@@ -1,3 +1,4 @@
+import propTypes from 'prop-types';
 import { NavItem } from './AppBar.styled';
 import { Box } from '../Box';
 import { navItems } from './NavItems';
@@ -16,6 +17,9 @@ const AppBar = () => {
       </Box>
     </Box>
   );
+};
+AppBar.propTypes = {
+  to: propTypes.string,
 };
 
 export default AppBar;

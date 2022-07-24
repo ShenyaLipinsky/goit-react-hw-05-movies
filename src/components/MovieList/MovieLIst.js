@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 import { NavLink } from 'react-router-dom';
 import { Box } from '../Box';
 import { NavItem } from './MovieList.styled';
@@ -20,6 +22,16 @@ const MovieList = ({ data, moreDetails, location }) => {
       })}
     </Box>
   );
+};
+MovieList.propTypes = {
+  moreDetails: propTypes.func.isRequired,
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.number.isRequired,
+      original_title: propTypes.string,
+      name: propTypes.string,
+    })
+  ),
 };
 
 export default MovieList;

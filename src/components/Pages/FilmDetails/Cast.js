@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 import { fetchCrew } from '../../services/API-MovieDB';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -48,4 +50,11 @@ const Cast = () => {
     </Box>
   );
 };
+Cast.propTypes = {
+  id: propTypes.number,
+  name: propTypes.string,
+  job: propTypes.string,
+  profile_path: propTypes.string,
+};
+
 export default Cast;

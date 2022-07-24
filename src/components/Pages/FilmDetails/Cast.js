@@ -26,11 +26,12 @@ const Cast = () => {
         return (
           <CastItem key={id}>
             {profile_path === null ? (
-              <img
-                src="/src/components/Images/NoPhoto.jpg"
-                alt="actor"
-                width="160"
-              />
+              // <img
+              //   src="/src/components/Images/NoPhoto.jpg"
+              //   alt="actor"
+              //   width="160"
+              // />
+              <p>Have no Photo</p>
             ) : (
               <img
                 src={`https://image.tmdb.org/t/p/w500${profile_path}`}

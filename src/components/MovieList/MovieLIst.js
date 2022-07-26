@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Box } from '../Box';
 import { NavItem } from './MovieList.styled';
 
@@ -10,13 +10,13 @@ const MovieList = ({ data, moreDetails, location }) => {
       {data.map(({ id, original_title, name }) => {
         return (
           <NavItem key={id}>
-            <NavLink
+            <Link
               to={location.pathname === '/' ? `movies/${id}` : `${id}`}
               state={{ from: location }}
               onClick={() => moreDetails(id)}
             >
               {original_title || name}
-            </NavLink>
+            </Link>
           </NavItem>
         );
       })}
